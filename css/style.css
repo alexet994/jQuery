@@ -1,0 +1,236 @@
+@font-face {
+   font-family: Yanone_Kaffeesatz;
+   src: url('../fonts/Yanone_Kaffeesatz/YanoneKaffeesatz-VariableFont_wght.ttf');
+}
+:root {
+   --color1:#DDCACE;
+   --color2: #E9A098;
+   --color3: #7C7B6F;
+   --color4:#3A362E;
+   --color5:#D45F5F;
+ }
+
+* {
+   margin: 0;
+   padding: 0;
+   outline: none;
+   font-family: Yanone_Kaffeesatz;
+   font-weight: bold;
+}
+body {
+   background: var(--color1);
+}
+a {
+   text-decoration: none;
+   transition: color 600ms linear;
+}
+img {max-width: 100%;}
+header {
+   width: 90%;
+   padding: 20px 5%;
+   background: var(--color5);
+   display: flex;
+   justify-content: space-between ;
+   align-items: center;
+}
+header > .logo {
+   font-size: 25px;
+   font-weight: 900;
+}
+header > .nav {
+   position: relative;
+   left: -50px;
+}
+header > .nav a {
+   margin:  0 15px;
+   display: inline-block;
+   color: var(--color4);
+}
+header>.nav a:hover,
+header>.menu:hover {color:var(--color1);}
+header > .menu {
+   cursor: pointer;
+   color: var(--color4);
+   font-size: 23px;
+}
+.fixed {
+   position: sticky;
+   top: 0;
+   left: 0;
+   z-index: 10;
+}
+.fullPage , .bg-fixed {
+   height: 95vh;
+   background:url('../img/fon.jpg') no-repeat center center;
+      background-attachment: fixed; 
+      background-size: cover;
+      background-blend-mode: multiply;
+      background-color: var(--color2);
+      text-align: center;
+      color: var(--color1);
+}
+
+.fullPage  h1 {
+   padding-top: 250px;
+   font-size: 45px;
+   width: 500px;
+   margin: 0 auto;
+}
+.fullPage  h3 {
+   margin: 20px 0;
+   font-size: 25px;
+   text-transform: uppercase;
+   font-weight: 200;
+}
+.fullPage  button , .bg-fixed button{
+   padding: 15px 25px;
+   border-radius: 5px;
+   border: 0;
+   font-size: 16px;
+   cursor: pointer;
+   background: var(--color5);
+   color: var(--color1) ;
+   font-weight: 200;
+   transition: all 600ms ease;
+}
+.fullPage  button:hover,.bg-fixed button:hover {
+   background: var(--color2) ;
+   color: var(--color4) ;
+}
+.fullPage  button:hover i {margin-top: 7px;}
+.fullPage  button i {
+   margin-left: 10px;
+   transition: margin 600ms ease;
+}
+.gallery {
+   width: 70%;
+   margin: 50px 15%;
+   height: 450px;
+   position: relative;
+   left: 100px;
+
+}
+.gallery div {
+   margin-top: 10px;
+   margin-right: 50px;
+}
+.gallery img {
+   height: 300px;
+}
+.gallery .arow-prev,
+.gallery .arow-next {
+   font-size: 28px;
+   position: absolute;
+   top:50%;
+   transition: all 600ms ease;
+}
+.gallery .arow-prev {
+   left: -50px;
+}
+.gallery .arow-next {
+right: -30px;
+}
+.gallery .arow-prev:hover,
+.gallery .arow-next:hover {
+   transform: scale(1.4);
+   cursor: pointer;
+}
+.features {
+   display: flex;
+   justify-content: space-between;
+   width: 60%;
+   margin-left: 20%;
+   
+}
+.features > div {
+   width: 300px;
+   text-align: center;
+   margin: 50px 10px;
+}
+.features > div img {
+   width: 50px;
+   margin-bottom: 10px;
+}
+.features > div h4 {
+   font-size:22px ;
+   margin-bottom: 10px;
+   color: var(--color4);
+}
+.features > div p {
+   color: var(--color4);
+   font-weight: 200;
+   font-size:18px ;
+}
+.bg-fixed {
+   height: 300px;
+}
+.bg-fixed h3 {
+   font-size: 25px;
+   padding-top: 130px;
+   margin-bottom: 20px;
+}
+.bg-fixed input {
+   padding: 14px 20px;
+   width: 300px;
+   font-size: 16px;
+   border-radius: 5px;
+   background: var(--color1);
+}
+footer {
+   width: 90%;
+   padding: 50px 5%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   background: var(--color5);
+}
+footer .upBtn , footer .social div {
+   width: 50px;
+   height: 50px;
+   text-align: center;
+   line-height: 50px;
+   border-radius: 50%;
+   background: var(--color2);
+   border: 1px solid  var(--color1) ;
+   cursor: pointer;
+   transition: transform 600ms ease;
+}
+footer .upBtn:hover , footer .social div:hover {
+   transform:translateY(-15px) ;
+}
+footer .social div {
+   display: inline-block;
+   margin-left: 15px;
+}
+#hidden {
+   width: 300px;
+   position: fixed;
+   top: 0;
+   right: -300px;
+   z-index: 10;
+   height: 100vh;
+   background: var(--color1);
+   text-align: center;
+}
+#hidden .close {
+   font-size: 40px;
+   float: right;
+   margin-right: 20px;
+   cursor: pointer;
+   transition: color 600ms ease;
+}
+#hidden .close:hover{color: var(--color5);}
+#hidden h2 {
+   margin-top: 100px;
+   margin-bottom: 20px;
+}
+#hidden ul {list-style: none;}
+#hidden li a {
+   display: block;
+   margin-bottom: 10px;
+   padding-top: 5px;
+   color: var(--color4);
+}
+#hidden li a:hover {
+   color: var(--color5);
+}
